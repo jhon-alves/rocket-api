@@ -10,7 +10,7 @@ app.use(cors());
 
 // Iniciando o DB
 mongoose.connect(
-  'mongodb+srv://root:root@cluster0.khuwt.mongodb.net/test?retryWrites=true', { 
+  'mongodb+srv://root:root@cluster0.khuwt.mongodb.net/productexample?retryWrites=true&w=majority', { 
     useNewUrlParser: true,
     useUnifiedTopology: true
   }
