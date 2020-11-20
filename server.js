@@ -10,7 +10,7 @@ app.use(cors());
 
 // Iniciando o DB
 mongoose.connect(
-  'mongodb://localhost:27017/nodeapi', { 
+  'mongodb+srv://root:root@cluster0.khuwt.mongodb.net/products?retryWrites=true&w=majority', { 
     useNewUrlParser: true,
     useUnifiedTopology: true
   }
@@ -20,4 +20,4 @@ requireDir('./src/models');
 // Rotas
 app.use('/api', require('./src/routes'));
 
-app.listen(3001);
+app.listen(process.env.PORT || 3000);
